@@ -12,7 +12,7 @@ function Button({children}) {
     useEffect(() => {
         buttonRef.current.style.backgroundColor = 'red';
         buttonRef.current.style.color = 'white';
-    })
+    }, [])
 
     return (
         <button style={styles} ref={buttonRef}>

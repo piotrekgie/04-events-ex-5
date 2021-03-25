@@ -9,7 +9,7 @@ function ButtonWithHover({children}) {
         padding: 20,
     };
 
-    const handleOnHover = (event, hover) => {
+    const handleOnHover = (hover) => {
         let bgColor = hover ? 'red' : styles.backgroundColor;
         let color = hover ? 'white' : styles.color;
 
@@ -19,8 +19,8 @@ function ButtonWithHover({children}) {
 
     return (
         <button style={styles}
-                onMouseEnter={(e) => handleOnHover(e, true)}
-                onMouseLeave={(e) => handleOnHover(e, false)}
+                onMouseEnter={(e) => handleOnHover(true)}
+                onMouseLeave={(e) => handleOnHover( false)}
                 ref={buttonRef}
         >
             <span>{children}</span>
